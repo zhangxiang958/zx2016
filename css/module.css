@@ -14,25 +14,159 @@ body {
 	width: 600px;
 	height: 100%;
 }
-.FrontEnd {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-.FE-man {
-	position: absolute;
-	right: 0;
-	bottom: 25%;
-	width: 50%;
-}
-.FE-else {
-	position: absolute;
-	left: 10%;
-	bottom: 20%;
-}
 canvas {
 	position: absolute;
 	left: 0;
 	top: 0;
+	z-index: 0;
+}
+.FrontEnd,.ios,.php,.java,.android,.c{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.FE-man   {
+	position: absolute;
+	right: 0;
+	bottom: 14.63%;
+	width: 59.17%;
+}
+.FE-else {					
+	position: absolute;
+	left: 10.02%;
+	bottom: 15.23%;
+	width: 36.48%;
+}
+.ios-man   {
+	position: absolute;
+	right: 0;
+	bottom: 14.3%;
+	width: 48.2%;
+}
+.php-else {					
+	position: absolute;
+	left: 12.48%;
+	bottom: 16.04%;
+	width: 41.78%;
+}
+.php-man   {
+	position: absolute;
+	right: 0;
+	bottom: 14.65%;
+	width: 42.35%;
+}
+.ios-else {					
+	position: absolute;
+	left: 16.64%;
+	bottom: 17.79%;
+	width: 41.43%;
+}
+.java-body {
+	position: absolute;
+	right: 0;
+	bottom: 14.75%;
+	width: 42.06%;
+}
+.java-head {
+	position: absolute;
+	right: 20%;
+	bottom: 56.49%;
+	width: 15.48%;
+}
+.java-else {					
+	position: absolute;
+	left: 17.86%;
+	bottom: 14.75%;
+	width: 35.12%
+}
+.c-body {
+	position: absolute;
+	right: 0;
+	bottom: 14.65%;
+	width: 41.83%;
+}
+.c-head {
+	position: absolute;
+	right: 19.6%;
+	bottom: 53.3%;
+	width: 15.8%;
+}
+.c-else {					
+	position: absolute;
+	left: 12.54%;
+	bottom: 10.86%;
+	width: 45.22%
+}
+.ad-body {
+	position: absolute;
+	right: 0;
+	bottom: 14.6%;
+	width: 42.46%;
+}
+.ad-head {
+	position: absolute;
+	right: 21%;
+	bottom: 55.4%;
+	width: 15.48%;
+}
+.ad-else {					
+	position: absolute;
+	left: 19.04%;
+	bottom: 13.4%;
+	width: 41.84%
+}
+.java-head,.ad-head,.c-head {
+	animation: headshake 2s linear infinite;
+	-webkit-animation: headshake 2s linear infinite;
+}
+@keyframes headshake {
+	0% {
+		transform: rotate(0deg);
+		transform-origin: center bottom;
+	}
+	25% {
+		transform: rotate(10deg);
+		transform-origin: center bottom;
+	}
+	50% {
+		transform: rotate(0deg);
+		transform-origin: center bottom;
+	}
+	75% {
+		transform: rotate(-10deg);
+		transform-origin: center bottom;
+	}
+	100% {
+		transform: rotate(0deg);
+		transform-origin: center bottom;
+	}
+}
+@-webkit-keyframes headshake {
+	0% {
+		transform: rotate(0deg);
+		-webkit-transform-origin: center bottom;
+	}
+	25% {
+		transform: rotate(10deg);
+		-webkit-transform-origin: center bottom;
+	}
+	50% {
+		transform: rotate(0deg);
+		-webkit-transform-origin: center bottom;
+	}
+	75% {
+		transform: rotate(-10deg);
+		-webkit-transform-origin: center bottom;
+	}
+	100% {
+		transform: rotate(0deg);
+		-webkit-transform-origin: center bottom;
+
+	}
+}
+canvas {
+	position: absolute;
+	left: 15%;
+	top: 5%;
 	z-index: 0;
 }
