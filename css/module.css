@@ -40,7 +40,6 @@ canvas {
 	animation: parabola  1.2s  linear,turnbig 1s  linear 1.2s infinite;
 	-webkit-animation: parabola 1.2s  linear, turnbig 1s  linear 1.2s infinite;
 }
-
 .ios-man   {
 	position: absolute;
 	right: 0;
@@ -52,6 +51,7 @@ canvas {
 	left: 12.48%;
 	bottom: 16.04%;
 	width: 41.78%;
+	animation: phprotate 1s  linear infinite;
 }
 .php-man   {
 	position: absolute;
@@ -71,9 +71,9 @@ canvas {
 }
 .java-head {
 	position: absolute;
-	top: -6%;
-	left: 16%;
-	width: 36%;
+	top: 2%;
+	left: 17.4%;
+	width: 35%;
 }
 .java-else {					
 	position: absolute;
@@ -86,9 +86,9 @@ canvas {
 }	
 .c-head {
 	position: absolute;
-	top: -6%;
-	left: 17%;
-	width: 34%;
+	top: -7%;
+	left: 16%;
+	width: 37%;
 }
 .c-else {					
 	position: absolute;
@@ -111,12 +111,22 @@ canvas {
 	position: absolute;
 	left: 19.04%;
 	bottom: 13.4%;
-	width: 41.84%;
-	animation: shine 1s  linear 1.2s infinite;
+	width: 41.84%;	
+}
+.ring {
+	position: absolute;
+	left: 57%;
+	top: -14%;
+	animation: shine 1s linear 1.2s infinite;
+}
+.androidlogo {
+	position: relative;
+	left: -20%;
 }
 .java-head,.ad-head,.c-head {
 	animation: headshake 2s linear infinite;
 	-webkit-animation: headshake 2s linear infinite;
+	-moz-animation: headshake 2s linear infinite;
 }
 .c div {
 	right: 0;
@@ -142,6 +152,49 @@ canvas {
 	top: 5%;
 	z-index: 0;
 }
+/*php 大象 摇动*/
+@keyframes phprotate {
+	0% {
+		transform: rotate(0deg);
+		transform-origin: 0 100%;
+	}
+	25% {
+		transform: rotate(10deg);
+		transform-origin: 0 100%;
+	}
+	50% {
+		transform: rotate(0deg);
+		transform-origin: 0 100%;
+	}
+	75% {
+		transform: rotate(-10deg);
+		transform-origin: 0 100%;
+	}
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 0 100%;
+	}
+
+}
+@-webkit-keyframes phprotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	25% {
+		-webkit-transform: rotate(20deg);
+	}
+	50% {
+		-webkit-transform: rotate(40deg);
+	}
+	75% {
+		-webkit-transform: rotate(20deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+	}
+
+}
+/*摆头 */
 @keyframes headshake {
 	0% {
 		transform: rotate(0deg);
@@ -250,6 +303,7 @@ canvas {
 	20%{
 		bottom: 15.23%;
 		left: -50%;
+		-webkit-transform: translate(5px,0px) rotate(2deg);
 	}
 	30%{
 		bottom: 30%;
@@ -267,6 +321,7 @@ canvas {
 	60%{
 		bottom: 15.23%;
 		left: -15%;
+		-webkit-transform: translate(5px,0px) rotate(2deg);
 	}
 	70%{
 		bottom: 20%;
@@ -283,11 +338,40 @@ canvas {
 	100%{
 		bottom: 15.23%;
 		left: 10.02%;
+		-webkit-transform: translate(5px,0px) rotate(2deg);
 	}
 }
 
 /*闪烁*/
 @keyframes shine {
+	0% {
+		opacity: 1;
+		filter:Alpha(opacity=100);
+	}
+	50% {
+		opacity: .7;
+		filter:Alpha(opacity=80);
+	}
+	100% {
+		opacity: 1;
+		filter:Alpha(opacity=100);
+	}
+}
+@-webkit-keyframes shine {
+	0% {
+		opacity: 1;
+		filter:Alpha(opacity=100);
+	}
+	50% {
+		opacity: .7;
+		filter:Alpha(opacity=80);
+	}
+	100% {
+		opacity: 1;
+		filter:Alpha(opacity=100);
+	}
+}
+@-moz-keyframes shine {
 	0% {
 		opacity: 1;
 		filter:Alpha(opacity=100);
@@ -324,6 +408,17 @@ canvas {
 		transform: scale(1);
 	}
 }
+@-moz-keyframes turnbig {
+	0% {
+		-moz-transform: scale(1);
+	}
+	50% {
+		-moz-transform: scale(.9);
+	}
+	100% {
+		-moz-transform: scale(1);
+	}
+}
 /*变大动效*/
 @keyframes come {
 	0% {
@@ -336,7 +431,28 @@ canvas {
 		transform:scale(1) translateY(0);
 	}
 }
-
+@-webkit-keyframes come {
+	0% {
+		-webkit-transform:scale(0) translateY(50px);
+	}
+	30% {
+		-webkit-transform:scale(.3) translateY(100px);
+	}
+	100% {
+		-webkit-transform:scale(1) translateY(0);
+	}
+}
+@-moz-keyframes come {
+	0% {
+		-moz-transform:scale(0) translateY(50px);
+	}
+	30% {
+		-moz-transform:scale(.3) translateY(100px);
+	}
+	100% {
+		-moz-transform:scale(1) translateY(0);
+	}
+}
 /*抖动动效*/
 @keyframes shake {
           0% {
@@ -359,7 +475,27 @@ canvas {
           	transform: translate(0px,0px) rotate(0deg);
           }
 }
-
+@-moz-keyframes shake {
+          0% {
+          	-moz-transform: translate(0px,0px) rotate(0deg);
+        
+          }	
+          25% {
+          	-moz-transform: translate(5px,0px) rotate(2deg);
+          
+          }
+          50% {
+          	-moz-transform: translate(0px,0px) rotate(0deg);
+           
+          }
+          75% {
+          	-moz-transform: translate(-5px,-0px) rotate(-2deg);
+          	
+          }
+          100% {
+          	-moz-transform: translate(0px,0px) rotate(0deg);
+          }
+}
 @-webkit-keyframes shake {
           0% {
           	-webkit-transform: translate(0px,0px) rotate(0deg);
@@ -505,7 +641,7 @@ canvas {
     transform: scale3d(1, 1, 1);
   }
 }
-/*ios-else show*/
+/* 字体 show*/
 @-webkit-keyframes lightSpeedIn {
   from {
     -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
