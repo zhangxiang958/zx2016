@@ -1,12 +1,14 @@
 html {
 	height: 100%;
+	overflow: hidden;
 }
 body {
+	position: relative;
 	margin: 0;
 	height: 100%;
 	font-size: 62.5%;
-	background: url(../img/bg.png) repeat-y;
 	background-repeat: repeat; 
+	overflow: hidden;
 }
 .container {
 	position: relative;
@@ -14,80 +16,152 @@ body {
 	width: 600px;
 	height: 100%;
 }
-canvas {
+.download {
 	position: absolute;
-	left: 0;
-	top: 0;
+	right: 5%;
+	top: 5%;
+}
+#particles-js {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  background: #002;
+	  background-image: url("");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  background-position: 50% 50%;
+}
+.star {
+	position: absolute;
+	bottom: -40%;
+	width: 100%;
 	z-index: 0;
 }
+.earth {
+	position: absolute;
+	bottom: -10%;
+	width: 100%;
+}
+.out {
+	bottom: -37%;
+}
+.inner {
+	bottom: -33%;
+}
+.first {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	animation: fadeOut 1.6s  linear 0.5s;
+}
+.cscw {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	animation: fadeIn 1s linear, fadeOut 2s linear;
+}
+.ios,.php,.java,.android,.c {
+	display: none;
+}
 .FrontEnd,.ios,.php,.java,.android,.c{
+
 	position: relative;
 	width: 100%;
 	height: 100%;
+}
+img[src*=word-] {
+	width: 60%;
+	animation: bounceInDown 1.6s linear;
 }
 .FE-man   {
 	position: absolute;
 	right: 0;
 	bottom: 14.63%;
-	width: 59.17%;
-	animation: come 1.6s linear;
+	width: 45%;
+	z-index: 2;
+	animation: flipInY 1.6s  forwards;
+	-webkit-animation: flipInY 1.6s  forwards;
 }
 .FE-else {					
 	position: absolute;
 	left: 10.02%;
 	bottom: 15.23%;
 	width: 36.48%;
-	animation: parabola  1.2s  linear,turnbig 1s  linear 1.2s infinite;
-	-webkit-animation: parabola 1.2s  linear, turnbig 1s  linear 1.2s infinite;
+	z-index: 2;
+	animation: fadeIn 1s linear, turnbig 1s  linear 1.2s infinite;
+	-webkit-animation: fadeIn 1s linear, turnbig 1s  linear 1.2s infinite;
 }
 .ios-man   {
 	position: absolute;
-	right: 0;
+	right: 10%;
 	bottom: 14.3%;
-	width: 48.2%;
+	width: 35%;
+	z-index: 2;
+	animation: fadeIn 1s linear;
+	-webkit-animation: fadeIn 1s linear;
+	-moz-animation: fadeIn 1s linear;
 }
+.ios-else {					
+	position: absolute;
+	left: 16.64%;
+	bottom: 12%;
+	width: 40%;
+	z-index: 2;
+	animation: fadeIn 1s linear, tada 1s  linear infinite;
+} 
 .php-else {					
 	position: absolute;
 	left: 12.48%;
 	bottom: 16.04%;
 	width: 41.78%;
+	z-index: 2;
 	animation: phprotate 1s  linear infinite;
 }
 .php-man   {
 	position: absolute;
-	right: 0;
+	right: 10%;
 	bottom: 14.65%;
-	width: 42.35%;
+	width: 25%;
+	z-index: 2;
+	animation: fadeIn 1s linear;
 }
-.ios-else {					
-	position: absolute;
-	left: 16.64%;
-	bottom: 17.79%;
-	width: 41.43%;
-	animation: tada 1s  linear infinite;
-} 
 .java-body {
-	width: 100%;
+	width: 60%;
+	z-index: 2;
 }
 .java-head {
 	position: absolute;
-	top: 2%;
-	left: 17.4%;
+	top: -12%;
+	left: 12.4%;
 	width: 35%;
 }
 .java-else {					
 	position: absolute;
 	left: 17.86%;
 	bottom: 14.75%;
-	width: 35.12%
+	width: 30%;
+	z-index: 2;
+	animation: fadeIn 1s linear;
+}
+.cup {
+	left: 15%;
+	width: 20%;
+	z-index: 3;
 }
 .c-body {
-	width: 100%;
+	width: 65%;
+	z-index: 2;
 }	
 .c-head {
 	position: absolute;
-	top: -7%;
-	left: 16%;
+	top: -10%;
+	left: 14%;
 	width: 37%;
 }
 .c-else {					
@@ -95,41 +169,43 @@ canvas {
 	left: 12.54%;
 	bottom: 10.86%;
 	width: 45.22%;
-	animation: wobble 1s  linear;
+	z-index: 2;
+	animation: fadeIn 1s linear, wobble 1s linear infinite;
 }
 .ad-body {
-	width: 100%;
-
+	width: 65%;
+	z-index: 2;
 }
 .ad-head {
 	position: absolute;
 	top: -10.7%;
 	left: 15.5%;
 	width: 34%;
+	animation: fadeIn  linear;
 }
 .ad-else {					
 	position: absolute;
 	left: 19.04%;
 	bottom: 13.4%;
-	width: 41.84%;	
+	width: 41.84%;
+	animation: fadeIn 1s linear;	
 }
 .ring {
 	position: absolute;
 	left: 57%;
-	top: -14%;
+	top: -20%;
 	animation: shine 1s linear 1.2s infinite;
 }
 .androidlogo {
-	position: relative;
-	left: -20%;
+	margin-left: -10%;
 }
 .java-head,.ad-head,.c-head {
-	animation: headshake 2s linear infinite;
-	-webkit-animation: headshake 2s linear infinite;
-	-moz-animation: headshake 2s linear infinite;
+	animation: headshake 2s linear 1s infinite;
+	-webkit-animation: headshake 2s linear  1sinfinite;
+	-moz-animation: headshake 2s linear 1s infinite;
 }
 .c div {
-	right: 0;
+	right: -5%;
 	bottom: 14.65%;
 	width: 41.83%;
 }
@@ -145,12 +221,7 @@ canvas {
 }
 .java div,.c div,.android div {
 	position: absolute;
-}
-canvas {
-	position: absolute;
-	left: 15%;
-	top: 5%;
-	z-index: 0;
+	z-index: 2;
 }
 /*php 大象 摇动*/
 @keyframes phprotate {
@@ -419,40 +490,106 @@ canvas {
 		-moz-transform: scale(1);
 	}
 }
-/*变大动效*/
-@keyframes come {
-	0% {
-		transform:scale(0) translateY(50px);
-	}
-	30% {
-		transform:scale(.3) translateY(100px);
-	}
-	100% {
-		transform:scale(1) translateY(0);
-	}
+/*FE-man 动效*/
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    opacity: 1;
+  }
 }
-@-webkit-keyframes come {
-	0% {
-		-webkit-transform:scale(0) translateY(50px);
-	}
-	30% {
-		-webkit-transform:scale(.3) translateY(100px);
-	}
-	100% {
-		-webkit-transform:scale(1) translateY(0);
-	}
+
+@-moz-keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
 }
-@-moz-keyframes come {
-	0% {
-		-moz-transform:scale(0) translateY(50px);
-	}
-	30% {
-		-moz-transform:scale(.3) translateY(100px);
-	}
-	100% {
-		-moz-transform:scale(1) translateY(0);
-	}
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
 }
+
 /*抖动动效*/
 @keyframes shake {
           0% {
@@ -642,54 +779,111 @@ canvas {
   }
 }
 /* 字体 show*/
-@-webkit-keyframes lightSpeedIn {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-    transform: translate3d(100%, 0, 0) skewX(-30deg);
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
     opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
   }
 
   60% {
-    -webkit-transform: skewX(20deg);
-    transform: skewX(20deg);
     opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
   }
 
-  80% {
-    -webkit-transform: skewX(-5deg);
-    transform: skewX(-5deg);
-    opacity: 1;
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
   }
 
   to {
     -webkit-transform: none;
     transform: none;
+  }
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/*first move*/
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/*translate delay*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
     opacity: 1;
   }
 }
 
-@keyframes lightSpeedIn {
+@keyframes fadeIn {
   from {
-    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-    transform: translate3d(100%, 0, 0) skewX(-30deg);
     opacity: 0;
   }
 
-  60% {
-    -webkit-transform: skewX(20deg);
-    transform: skewX(20deg);
-    opacity: 1;
-  }
-
-  80% {
-    -webkit-transform: skewX(-5deg);
-    transform: skewX(-5deg);
-    opacity: 1;
-  }
-
   to {
-    -webkit-transform: none;
-    transform: none;
     opacity: 1;
   }
 }

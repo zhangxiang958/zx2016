@@ -3,9 +3,7 @@ window.onload = function(){
             context = canvas.getContext('2d');
             focallength = 250;  //焦距
             var textArray = ["前端", "IOS", "C++", "PHP", "JAVA", "安卓"];
-
             var dots = getimgData(textArray[0]);
-
             var pause = false;
             initAnimate();
             function initAnimate(){
@@ -30,7 +28,6 @@ window.onload = function(){
                 	pause = false;
                 	initAnimate();
             	}
-
             var EventUtil = {
                 addHandler: function(element, type, handler) {
                     if(element.addEventListener) {
@@ -56,17 +53,19 @@ window.onload = function(){
                     }
                 },
                 getWheelDelta: function(event) {
-                    if ( event.wheelDelta) {
+                    console.log(event);
+                    if (event.wheelDelta) {
                         return event.wheelDelta;
                     } else {
                         return -event.detail * 40;
                     }
                 }
             };
+
             (function () {
                 var delta = 0;
                 function handleMouseWheel(event) {
-                    event = EventUtil.getEvent();
+                    var event = EventUtil.getEvent(event);
                     delta += EventUtil.getWheelDelta(event);
                     var i = delta / 120;
                     console.log(i);
@@ -76,49 +75,36 @@ window.onload = function(){
                     switch(i.toString()) {
                         case "0":
                             autoDraw(0);
-
                             break;
                         case "1":
-
                             autoDraw(1);
-
                             break;
                         case "2":
                             autoDraw(2);
-
                             break;
                         case "3":
                             autoDraw(3);
-
                             break;
                         case "4":
                             autoDraw(4);
-
                             break; 
                        case "5":
                             autoDraw(5);
-
                             break;
                        case "-5":
                             autoDraw(5);
-
                             break;
                         case "-4":
                             autoDraw(4);
-
                             break; 
                         case "-3":
                             autoDraw(3);
-
                             break;
                         case "-2":
                             autoDraw(2);
-
                             break;
                         case "-1":
-
                             autoDraw(1);
-
                             break;                                                
                     }
                 }
@@ -217,8 +203,8 @@ window.onload = function(){
             context.font = "100px 微软雅黑 bold";
             context.fillStyle = "rgba(168,168,168,1)";
             context.textAlign = "center";
-            context.textBaseline = "bottom";
-            context.fillText(text , canvas.width/2 , canvas.height/2);
+            context.textBaseline = "top";
+            context.fillText(text , canvas.width/2 , 0);
             context.restore();
         }
 
@@ -241,8 +227,8 @@ window.onload = function(){
                 context.save();
                 context.beginPath(); 
                 var scale = focallength/(focallength + this.z);
-                context.arc(canvas.width/2 + (this.x-canvas.width/2)*scale , canvas.height/2 + (this.y-canvas.height/2) * scale, this.radius*scale , 0 , 2*Math.PI);
-                context.fillStyle = "rgba(50,50,50,"+ scale +")";
+                context.arc(canvas.width/2 + (this.x-canvas.width/2)*scale , canvas.height/2 + (this.y-canvas.height/2) * scale, this.radius*0.8 , 0 , 2*Math.PI);
+                context.fillStyle = "rgba(20,198,162,"+ scale +")";
                 // context.fillStyle = "rgba(" + parseInt(Math.random() * 125 + 130) + "," + parseInt(Math.random() * 125 + 130) + "," + parseInt(Math.random() * 125 + 130) + " , 1)";
                 context.fill();
                 context.restore();
