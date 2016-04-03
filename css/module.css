@@ -21,6 +21,9 @@ body {
 	right: 5%;
 	top: 5%;
 }
+.download img {
+	width: 80%;
+}
 #particles-js {
 	  position: absolute;
 	  width: 100%;

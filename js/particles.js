@@ -1,10 +1,3 @@
-(function () {
-	if(window.innerWidth <= 768) {
-	document.getElementById("particles-js").style.display = "none";
-	var body = document.getElementsByTagName('body')[0];
-	body.style.background = "url(img/bg.png) repeat-y";
-	return false;
-} else {
 	particlesJS("particles-js", {
 	  "particles": {
 	    "number": {
@@ -115,8 +108,7 @@
 	  },
 	  "retina_detect": true
 	});
-}
-})();
+
 
 
 
