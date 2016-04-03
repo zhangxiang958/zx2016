@@ -143,6 +143,10 @@ img[src*=word-] {
 	width: 41.78%;
 	z-index: 2;
 	animation: phprotate 1s  linear infinite;
+	-o-animation: phprotate 1s  linear infinite;
+	-webkit-animation: phprotate 1s  linear infinite;
+	-moz-animation: phprotate 1s  linear infinite;
+	-ms-animation: phprotate 1s  linear infinite;
 }
 .php-man   {
 	position: absolute;
@@ -250,7 +254,7 @@ img[src*=word-] {
 	animation: headshake 2s linear 1s infinite;
 	-o-animation: headshake 2s linear 1s infinite;
 	-ms-animation: headshake 2s linear 1s infinite;
-	-webkit-animation: headshake 2s linear  1sinfinite;
+	-webkit-animation: headshake 2s linear  1s infinite;
 	-moz-animation: headshake 2s linear 1s infinite;
 }
 .c div {
