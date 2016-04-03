@@ -2,7 +2,7 @@
 	  "particles": {
 	    "number": {
 	      "value": 30,
-	      "density": {
+	      "density": {      
 	        "enable": true,
 	        "value_area": 800
 	      }
@@ -108,7 +108,6 @@
 	  },
 	  "retina_detect": true
 	});
-
 
 
 
