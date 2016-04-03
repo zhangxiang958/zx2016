@@ -74,55 +74,65 @@ $(function () {
   			$android = $('.android'),
   			$cpp = $('.c'),
   			$ios = $('.ios'),
-  			$php = $('.php');
+  			$php = $('.php'),
+  			$inf = $('.inf');
 		  console.log(i);
-		  if(i<-5 || i>5) {
-		  	i = i%6;
+		  if(i<-6 || i>6) {
+		  	i = i%7;
 		  }
 		  switch(i) {
 			  	case 0: $frontend.css('display','block').addClass('animate')
 				    		 .siblings('div').removeClass('animate')
 				    		 .css('display','none');
 				    	break;
-					case 1: $android.css('display','block').addClass('animate')
-			    				 .siblings('div').removeClass('animate')
-			    				 .css('display','none');
-			    		break;
-			    case 2: $cpp.css('display','block').addClass('animate')
+				case 1: $android.css('display','block').addClass('animate')
+		    				 .siblings('div').removeClass('animate')
+		    				 .css('display','none');
+		    		break;
+			    	case 2: $cpp.css('display','block').addClass('animate')
 		    				    .siblings('div').removeClass('animate')
 		    				    .css('display','none');
 		    			break;
-		    	case 3: $ios.css('display','block').addClass('animate')
+		    		case 3: $ios.css('display','block').addClass('animate')
 		    			 	.siblings('div').removeClass('animate')
 		    			 	.css('display','none');
 		    			break;
-		    	case 4: $php.css('display','block').addClass('animate')
+		    		case 4: $php.css('display','block').addClass('animate')
 		    				 .siblings('div').removeClass('animate')
 		    				 .css('display','none');
 		    			break;
-		    	case 5: $java.css('display','block').addClass('animate')
+		    		case 5: $java.css('display','block').addClass('animate')
 		    				.siblings('div').removeClass('animate')
 		    				.css('display','none');
 		    			break;
-		    	case -5: $android.css('display','block').addClass('animate')
+		    		case 6: $inf.css('display','block').addClass('animate')
+		    				.siblings('div').removeClass('animate')
+		    				.css('display','none');
+		    			break;	
+		    		case -6: $android.css('display','block').addClass('animate')
 		    					  .siblings('div').removeClass('animate')
 		    					  .css('display','none');
 		    			break;
-		    	case -4: $cpp.css('display','block').addClass('animate')
+		    		case -5: $cpp.css('display','block').addClass('animate')
 		    					 .siblings('div').removeClass('animate')
 		    				   .css('display','none');
 		    			 break;
-		    	case -3: $ios.css('display','block').addClass('animate')
+		    		case -4: $ios.css('display','block').addClass('animate')
 		    				 .siblings('div').removeClass('animate')
 		    				 .css('display','none');
 		    			 break;
-		    	case -2: $php.css('display','block').addClass('animate')
+		    		case -3: $php.css('display','block').addClass('animate')
 		    				 .siblings('div').removeClass('animate')
 		    				 .css('display','none');
 		    			 break;
-		    	case -1: $java.css('display','block').addClass('animate')
+		    		case -2: $java.css('display','block').addClass('animate')
 		    				  .siblings('div').removeClass('animate')
 		    				  .css('display','none');
+		    			break;	  
+		    		case -1: $inf.css('display','block').addClass('animate')
+		    				.siblings('div').removeClass('animate')
+		    				.css('display','none');
+		    			break;		  
 		  }
 	}
 	
