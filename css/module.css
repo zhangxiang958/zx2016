@@ -74,6 +74,15 @@ body {
 	filter: alpha(opacity=0);
 	animation: fadeIn 1s linear, fadeOut 2s linear;
 }
+.tips {
+	position: absolute;
+	width: 10%;
+	right: 1%;
+	top: 10%;
+}
+.tips img {
+	width: 80%;
+}
 .ios,.php,.java,.android,.c {
 	display: none;
 }
@@ -103,7 +112,7 @@ img[src*=word-] {
 }
 .FE-man   {
 	position: absolute;
-	right: 0;
+	right: 10%;
 	bottom: 14.63%;
 	width: 45%;
 	z-index: 2;
@@ -1621,4 +1630,9 @@ img[src*=word-] {
   to {
     opacity: 1;
   }
+}
+@media screen and (max-width: 768px) {
+	.tips {
+		display: none;
+	}
 }

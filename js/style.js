@@ -20,6 +20,7 @@ $(function () {
 
 	$('body').on('touchstart', function(e){
 	    startX = e.originalEvent.changedTouches[0].pageX;
+	    console.log(e.originalEvent.changedTouches[0]);
 	});
 	$('body').rotate({
 	    bind: {
@@ -48,14 +49,23 @@ $(function () {
 	        touchend: function(e){
 	            e.preventDefault();
 	            var moveEndX = e.originalEvent.changedTouches[0].pageX,
-	            	X = moveEndX - startX;
+	            	X = startX - moveEndX;
+	            	// X = moveEndX - startX;
+	            	console.log(startX,moveEndX);
 	            console.log(X);
-	            if(X > 0) {
-	              	value2 += 240;
-	            } 
-	            else {
+	            if(X > 0|| X === 0) {
+	            		if(X === 0){
+	            			if(moveEndX > $(window).width()/2){
+		            			value2 +=240;
+		            		}else{
+		            			value2 -=240;
+		            		}
+	            		}else{
+	            			value2 += 240;
+	            		}
+	            	}else {
 	              	value2 -= 240;
-	            }
+	              }
 	            
 	            $starClass.rotate({
 	                animateTo: value2
@@ -80,6 +90,7 @@ $(function () {
 		  if(i<-6 || i>6) {
 		  	i = i%7;
 		  }
+		  $('.tips').css("display","none");
 		  switch(i) {
 			  	case 0: $frontend.css('display','block').addClass('animate')
 				    		 .siblings('div').removeClass('animate')
