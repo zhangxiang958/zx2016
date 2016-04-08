@@ -1,5 +1,4 @@
 $(function () {
-
 	var $window = $(window),
 		oHeight = $window.height(),
 		oWidth = $window.width(),
@@ -86,7 +85,7 @@ $(function () {
   			$ios = $('.ios'),
   			$php = $('.php'),
   			$inf = $('.inf');
-		  console.log(i);
+
 		  if(i<-6 || i>6) {
 		  	i = i%7;
 		  }
